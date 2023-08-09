@@ -1,0 +1,30 @@
+﻿$bg:hsl(0, 0%, 100%);
+$body: hsl(218, 44%, 22%);
+$secondary:hsl(220, 15%, 55%);
+$tertiary: hsl(212, 45%, 89%);
+
+
+
+
+$color-map:(
+
+background:
+(
+    400:$bg
+),
+body:
+(
+    400:$body
+),
+secondary:
+(
+    400: $secondary
+),
+tertiary:(
+    400:$tertiary
+)
+
+   
+  );
+
+

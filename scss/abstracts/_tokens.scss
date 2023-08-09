@@ -1,0 +1,12 @@
+@use "sass:map";
+
+@use "../abstracts/colors" as*;
+@use "../abstracts/typography" as*;
+@use "../abstracts/sizes" as*;
+
+
+$active-theme: $default;
+$enable-media-query-dark-mode:false;
+
+
+$color-text-default:$color-neurtal-700;

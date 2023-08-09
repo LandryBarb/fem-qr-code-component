@@ -1,0 +1,47 @@
+@use '../abstracts' as *;
+@use '../base' as *;
+@use '../helpers' as *;
+
+$border-radius: 10px;
+
+main {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}
+
+.wrapper {
+    padding: 1rem;
+    border-radius: $border-radius;
+    background-color: var(--site-bg);
+    max-width: 300px;
+
+    @include mediaQry(small) {
+        max-width: 365px;
+    }
+}
+
+.img_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        border-radius: $border-radius;
+    }
+}
+
+hgroup {
+    margin-block-start: var(--space-2);
+    text-align: center;
+
+    h2 {
+        font-weight: var(--fw-boldest);
+        color: var(--clr-body-400);
+    }
+
+    p {
+        margin-block-start: var(--space-2);
+        color: var(--clr-secondary-400);
+    }
+}

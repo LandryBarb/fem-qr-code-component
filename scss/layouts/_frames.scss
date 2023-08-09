@@ -1,0 +1,64 @@
+﻿@use '../helpers/mixins' as *;
+
+.container {
+    width: min(calc(100vw - 2.5rem), 20rem);
+    margin-inline: auto;
+    height: inherit;
+}
+.grid_container{
+    display:grid;
+    place-items:center;
+}
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+.auto_grid{
+   display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+       gap:var(--gap, var(--padding-1));
+}
+
+.even_columns{
+    display: grid;
+    gap:2rem;
+
+    @include mediaQry(medium){
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+}
+
+.offset-grid{
+    display: grid;
+    gap:1rem;
+    grid-template-columns: repeat(3, 1fr);
+    & > :nth-child(2),
+    & > :nth-child(3){
+        grid-column: span 2;
+    }
+    p{
+        max-width: 32ch;
+    }
+}
+
+.pile{
+    display: grid;
+    grid-template-areas: "pile";
+    place-content: center;
+    > *{
+        grid-area: pile;
+    }
+}
+
+.cluster{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
